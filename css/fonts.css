@@ -1,0 +1,17 @@
+@font-face {
+    font-family: parastoo;
+    font-weight: 400;
+    font-style: normal;
+    src: url(/assets/fonts/Parastoo.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: parastoo;
+    font-weight: 700;
+    font-style: normal;
+    src: url(/assets/fonts/Parastoo.woff2) format("woff2");
+}
+
+body{
+    font-family: "parastoo";
+}
