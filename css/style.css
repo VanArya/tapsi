@@ -8,6 +8,7 @@
 
 :root{
     --color-primary: #ff5722;
+    --color-primary-light: #ff7a50;
     --color-secondary-light:#fff6f2;
     --color-secondary-dark: #ffa589;
     --navbar-color: #f8f8f8;
@@ -125,5 +126,52 @@ h2{
         font-size: 1.8;
         margin-bottom: 2rem;
     }
-    
+}
+
+.block-plan{
+    display: grid;
+    gap: 2rem 3rem;
+    margin-top: 3rem;
+}
+@media screen and (min-width:1024px) {
+    .block-plan{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+.plan{
+    max-width: 500px;
+    font-size: 1.8rem;
+}
+.card{
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 0 20px 10px #efefef;
+}
+
+.card_body,.card_header{
+    padding: 3rem 2.5rem;
+}
+.card_header{
+    color: var(--color-white);
+}
+.card--primary .card_header{
+    background-color: var(--color-primary-light);
+}
+.card--secondary .card_header{
+    background-color: var(--color-secondary-dark);
+}
+.plan_intro{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+.plan_price{
+    font-size: 3rem;
+}
+.plan_biling_cycle{
+    font-size: 1.4rem;
+}
+.plan_description{
+    margin-top: 1.5rem;
+    display: block;
 }
