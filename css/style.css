@@ -6,6 +6,7 @@
     padding: 0;
 }
 
+/* root */
 :root{
     --color-primary: #ff5722;
     --color-primary-light: #ff7a50;
@@ -50,6 +51,7 @@ h2{
     }
 }
 
+/* button */
 .btn{
     cursor: pointer;
     outline: 0;
@@ -72,14 +74,22 @@ h2{
     background-color: var(--color-secondary-dark);
     color: var(--color-white);
 }
+.btn--block{
+    width:100%;
+    font-size: 1.6rem;
+}
 
 @media screen and (min-width:1024px) {
     .btn{
         font-size: 1.6rem;
     }
+    .btn--block{
+        font-size: 2rem;
+    }
     
 }
 
+/* badge */
 .badge{
     display: inline-block;
     padding: 0.5rem 1.3rem;
@@ -103,6 +113,7 @@ h2{
     
 }
 
+/* list */
 .list{
     list-style: none;
     font-size: 1.6rem;
@@ -128,24 +139,30 @@ h2{
     }
 }
 
+/* plan */
 .block-plan{
     display: grid;
-    gap: 2rem 3rem;
-    margin-top: 3rem;
+    gap: 9rem 6rem;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit,minmax(250px,320px));
+    margin-top: 5rem;
+    margin-right: 5rem;
 }
 @media screen and (min-width:1024px) {
-    .block-plan{
-        grid-template-columns: repeat(3, 1fr);
+    .plan .btn--block{
+        font-size: 1.8rem;
     }
 }
 .plan{
-    max-width: 500px;
+
     font-size: 1.8rem;
+    transition: all 0.2 ease-out;
 }
 .card{
     border-radius: 20px;
     overflow: hidden;
-    box-shadow: 0 0 20px 10px #efefef;
+    box-shadow: 0 0 20px 10px #afafaf;
+    margin:10px
 }
 
 .card_body,.card_header{
@@ -174,4 +191,20 @@ h2{
 .plan_description{
     margin-top: 1.5rem;
     display: block;
+}
+.plan .btn--block{
+    margin-top: 10rem;
+    font-size: 1.6rem;
+}
+.plan_primary{
+    transform: scale(1.1);
+}
+.plan:hover{
+    transform: scale(1.15);
+}
+
+/* conatiner */
+.container{
+    max-width: 1140px;
+    margin: 3rem auto;
 }
